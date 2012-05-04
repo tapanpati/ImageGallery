@@ -1,0 +1,28 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label :password, "current password" %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.label :password_confirmation , "confirm your current password"%><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+ <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

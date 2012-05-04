@@ -1,4 +1,13 @@
 ImageGallery::Application.routes.draw do
+
+  resources :users
+
+  match "/", :to => "users#index"
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+  resources :sessions, :only => [:new, :create, :destroy]
+  #resources :images
+  #resources :galleries
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
