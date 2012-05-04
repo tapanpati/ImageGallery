@@ -52,3 +52,61 @@ Mysql2::Error (Unknown database 'Image_gallery'):
   Rendered /home/tapan/.rvm/gems/ruby-1.9.2-p318/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
   Rendered /home/tapan/.rvm/gems/ruby-1.9.2-p318/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
   Rendered /home/tapan/.rvm/gems/ruby-1.9.2-p318/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.8ms)
+  [1m[36m (162.5ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (300.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Users (20120504085809)
+  [1m[35m (180.2ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `address` varchar(255), `encrypted_password` varchar(255), `dob` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (64.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120504085809')[0m
+Migrating to Images (20120504085851)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Users (20120504085809)
+Migrating to Images (20120504085851)
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Users (20120504085809)
+Migrating to Images (20120504085851)
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Users (20120504085809)
+Migrating to Images (20120504085851)
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Users (20120504085809)
+Migrating to Images (20120504085851)
+  [1m[36m (158.3ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (276.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Users (20120504085809)
+  [1m[35m (182.1ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `address` varchar(255), `encrypted_password` varchar(255), `dob` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (65.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120504085809')[0m
+Migrating to Images (20120504085851)
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Users (20120504085809)
+Migrating to Images (20120504085851)
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Users (20120504085809)
+Migrating to Images (20120504085851)
+  [1m[35m (98.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120504085851')
+Migrating to Galleries (20120504085912)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Users (20120504085809)
+Migrating to Images (20120504085851)
+Migrating to Galleries (20120504085912)
+  [1m[36m (122.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (287.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Users (20120504085809)
+  [1m[35m (127.2ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `address` varchar(255), `encrypted_password` varchar(255), `dob` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (65.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120504085809')[0m
+Migrating to Images (20120504085851)
+  [1m[36m (121.5ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (299.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Users (20120504085809)
+  [1m[35m (349.7ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `address` varchar(255), `encrypted_password` varchar(255), `dob` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (54.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120504085809')[0m
+Migrating to Images (20120504085851)
+  [1m[35m (108.7ms)[0m  CREATE TABLE `images` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `isActive` tinyint(1), `user_id` int(11), `gallery_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (54.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120504085851')[0m
+Migrating to Galleries (20120504085912)
+  [1m[35m (98.3ms)[0m  CREATE TABLE `galleries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB
+  [1m[36m (54.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120504085912')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
