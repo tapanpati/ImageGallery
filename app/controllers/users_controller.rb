@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
   #created by tapan
   #created_on:04/05/2012
-  #purpose: to create a new user
+  #purpose: to show a user
 
   def show
     @user = User.find(params[:id])

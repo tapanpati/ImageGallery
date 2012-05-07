@@ -1,0 +1,19 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<p>
+  <b>Name:</b>
+  <%= @gallery.name %><br />
+  
+
+  <% @gallery.images.each do |photo| %>
+
+    <h3><%=photo.name %></h3>
+    <%= image_tag photo.upload.url(:small) %>
+  <% end %>
+</p>
+<%= link_to "upload",new_gallery_image_path(@gallery) %>
+<%= link_to 'Edit', edit_gallery_path(@gallery) %> |
+<%= link_to 'Back', galleries_path %>

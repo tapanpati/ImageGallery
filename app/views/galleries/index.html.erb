@@ -1,0 +1,32 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<h1>Listing galleries</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Photo Title</th>
+    <th>Photos</th>
+  </tr>
+
+<% @galleries.each do |album| %>
+  <tr>
+    <td><%= album.name %></td>
+  <% album.images.each do |photo| %>
+    <td><%= photo.title %></td>
+    <td><%= image_tag photo.upload.url(:thumb) %></td>
+  <% end %>
+    <td><%= link_to 'Show', album %></td>
+    <td><%= link_to 'Edit', edit_gallery_path(album) %></td>
+    <td><%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New album', new_gallery_path %>
+

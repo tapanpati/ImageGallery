@@ -1,8 +1,13 @@
 ImageGallery::Application.routes.draw do
+  resources :galleries do
+     resources :images
+  end
 
   resources :users
 
-  match "/", :to => "users#index"
+ root :to => "galleries#index"
+
+
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   resources :sessions, :only => [:new, :create, :destroy]
